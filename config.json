@@ -2,11 +2,12 @@
   "agents": {
     "defaults": {
       "workspace": "~/.nanobot/workspace",
-      "model": "glm-5",
+      "model": "qwen2.5:0.5b",
       "provider": "vllm",
       "temperature": 0.8,
       "maxToolIterations": 40,
-      "memoryWindow": 100
+      "memoryWindow": 50,
+      "reasoningEffort": "none"
     }
   },
   "channels": {
@@ -23,7 +24,7 @@
   "providers": {
     "vllm": {
       "apiKey": "454864",
-      "apiBase": "https://ollamaproxy.vercel.app/api/v1",
+      "apiBase": "https://naimulislam864-qwen25-05b.hf.space/v1",
       "extraHeaders": null
     }
   },
@@ -44,7 +45,7 @@
       }
     },
     "exec": {
-      "timeout": 60,
+      "timeout": 6000000,
       "pathAppend": ""
     },
     "restrictToWorkspace": false,
